@@ -1,12 +1,16 @@
 #include "members/RESULT.h"
 
 int main(){
-    DAYTIME start(10,15);
-    RESULT  m1(101.01,start),
-            m2(m1),
-            m3(99.9);
+    DAYTIME morning(6,45);
+    RESULT  temp1(6.45,morning),
+            temp2(11.2,12,0,0);
 
-    m2.set_val(100.9);
-    cout<<"\nresult time\n";
-    m1.print();m2.print();m3.print();
+    double temp=0.0;
+    cout<<"air tempr? ";cin>>temp;
+
+    RESULT temp3(temp);
+    cout<<"temp\ttime\n";
+    temp1.print();temp2.print();temp3.print();
+    cout<<"max_"<<RESULT::get_max()
+        <<"\nmin_"<<RESULT::get_min()<<endl;
 }
