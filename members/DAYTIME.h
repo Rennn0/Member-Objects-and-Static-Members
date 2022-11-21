@@ -29,8 +29,8 @@ class DAYTIME
         int get_minute()const {return minute;}
         int get_second()const {return second;}
         void print()const{
-            cout<<this->hour<<endl
-            <<this->minute<<endl
+            cout<<this->hour<<'\t'
+            <<this->minute<<'\t'
             <<this->second<<endl;
         }
         
