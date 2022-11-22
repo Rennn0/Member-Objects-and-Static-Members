@@ -1,5 +1,5 @@
 #include "class.h"
-
+// light simulator
     inline void wait(int sec){
         time_t end=time(NULL)+sec;
         while(time(NULL)<end);
