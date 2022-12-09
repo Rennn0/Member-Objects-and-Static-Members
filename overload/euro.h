@@ -97,4 +97,24 @@ inline Euro operator-(const Euro& obj1,const Euro& obj2)
         return temp;
     }
 
+// shift operators
+
+ostream& operator <<(ostream& os, const Euro& obj)//output
+    {
+        os<<obj.as_string()<<" Euro "<<endl; return os;
+    } 
+istream& operator >>(istream& is, Euro& obj)//input
+    {
+        cout<<"Euro amount (xxx,xx): ";
+        int euro=0, cent=0; char c=0;
+        if(!(is>>euro>>c>>cent))
+            return is;
+        
+        if((c!=',' && c!='.') || cent>=100)
+            is.setstate(ios::failbit);
+        else 
+            obj=Euro(euro,cent);
+        
+        return is;
+    }
 #endif
