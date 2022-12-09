@@ -13,8 +13,8 @@ int main(void)
 
     b=obj3==obj1;
     cout<<boolalpha<<b<<endl;
-
-    ++obj2;
-    cout<<obj2;
-    //  ok
+//  ok
+    // ++obj2;
+    // cout<<obj2;// not ok
+    
 }

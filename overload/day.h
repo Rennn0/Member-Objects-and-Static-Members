@@ -37,7 +37,7 @@ class Day
         void dec();  
     
     public:      
-        Day& operator ++();
+        Day& operator ++(); // idk its not working -_-
         Day& operator ++(int);
         Day& operator --();
         Day& operator --(int);
