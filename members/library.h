@@ -1,5 +1,6 @@
 #include <vector>
 #include <fstream>
+#include <sstream>
 #include <cmath>
 #include <ctime>
 #include <cstring>
