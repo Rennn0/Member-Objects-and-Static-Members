@@ -26,12 +26,14 @@ class Fraction
         {
             numerator+=denominator;
             cout<<numerator<<' '<<denominator<<endl; 
+            value();
             return *this;
         }
         Fraction& operator --()
         {
             numerator-=denominator; 
             cout<<numerator<<' '<<denominator<<endl;
+            value();
             return *this;
         }
         // lets forget about math from here
@@ -41,6 +43,7 @@ class Fraction
             this->numerator*obj.denominator+obj.numerator*this->denominator;
             this->denominator*=obj.denominator;
             cout<<numerator<<' '<<denominator<<endl;
+            value();
             return *this;
         }
         Fraction& operator -=(const Fraction& obj)
@@ -49,6 +52,7 @@ class Fraction
             this->numerator*obj.denominator-obj.numerator*this->denominator;
             this->denominator*=obj.denominator;
             cout<<numerator<<' '<<denominator<<endl;
+            value();
             return *this;
         }
         Fraction& operator *=(const Fraction& obj)
@@ -56,6 +60,7 @@ class Fraction
             this->numerator*=obj.numerator;
             this->denominator*=obj.denominator;
             cout<<numerator<<' '<<denominator<<endl;
+            value();
             return *this;
         }
         Fraction& operator /=(const Fraction& obj)
@@ -63,8 +68,13 @@ class Fraction
             this->numerator*=obj.denominator*1.;
             this->denominator*=obj.numerator*1.;
             cout<<numerator<<' '<<denominator<<endl;
+            value();
             return *this;
-        }  
+        } 
+        void value()const
+        {
+            cout<<"value _ "<<(double)(1.*numerator/denominator)<<endl;
+        } 
         friend Fraction operator+(const Fraction&,const Fraction&);
         friend Fraction operator-(const Fraction&,const Fraction&);
         friend Fraction operator/(const Fraction&,const Fraction&);
