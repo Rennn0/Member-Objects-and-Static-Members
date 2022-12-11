@@ -7,5 +7,7 @@
 #include <random>
 #include <iostream>
 #include <iomanip>
+#include <limits>
+#include <typeinfo>
 #include <algorithm>
 using namespace std;
